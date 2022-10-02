@@ -6,11 +6,11 @@ info:
   version: 2022-09-30
   
 paths:
-  /menu/{storeID}
+  /menu/{shopID}:
     get:
       summary: Returns a list of in stock menu items at a specific coffee shop location.
       parameters:
-        - name: storeID
+        - name: shopID
           in: path
           required: true
           description: The number that is used to identify a specific coffee shop location.
@@ -18,3 +18,35 @@ paths:
             type: integer
             form: int64
             minimum: 1
+      responses:
+        '400':
+          description: The specified shop ID is not valid (not an integer or too large).
+        '404':
+          description: A coffee shop with the specified ID was not found
+            
+  /payment:
+    post:
+      summary: Creates a payment method for completing an order.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cardHolderName:
+                  type: string
+                cardNumber:
+                  type: string
+                expDat:
+                  type: string
+                CVV:
+                  type: string
+                billing address:
+                  type: string
+        responses:
+          '201':
+            description: Payment created successfully.
+          '401':
+            description: Payment not created successfully, lacks valid properties.
+      

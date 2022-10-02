@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info: 
   title: Sample REST API
-  description: OpenAPI specification for the process of someone who is ordering coffee from a coffe shop's online ordering app. Outlines the steps
+  description: OpenAPI specification for the process of someone who is ordering coffee from a coffee shop's online ordering app. Outlines the steps
   for a customer to open the coffee shop's ordering app and order a coffee from a specific shop location.
   version: 2022-09-30
   

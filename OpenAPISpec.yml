@@ -1,10 +1,20 @@
 openapi: 3.0.0
 info: 
   title: Sample REST API
-  description: OpenAPI specification for the retrieval of in stock menu items capability in the process of someone who is ordering coffee from a coffe shop's online ordering app.
+  description: OpenAPI specification for the process of someone who is ordering coffee from a coffe shop's online ordering app. Outlines the steps
+  for a customer to open the coffee shop's ordering app and order a coffee from a specific shop location.
   version: 2022-09-30
   
 paths:
-  /menu
+  /menu/{storeID}
     get:
       summary: Returns a list of in stock menu items at a specific coffee shop location.
+      parameters:
+        - name: storeID
+          in: path
+          required: true
+          description: The number that is used to identify a specific coffee shop location.
+          schema: 
+            type: integer
+            form: int64
+            minimum: 1

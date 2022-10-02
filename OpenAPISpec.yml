@@ -49,4 +49,13 @@ paths:
           description: Payment created successfully.
         '401':
           description: Payment not created successfully, lacks valid properties.
+    delete:
+      summary: Deletes a stored payment method for a customer.
+      responses:
+        '200':
+          description: Payment deleted successfully.
+        '401':
+          description: The deletion of a payment method is unauthorized.
+	      '404':
+	        description: The payment method to be deleted was not found (it was already removed).          
       

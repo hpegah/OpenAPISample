@@ -26,7 +26,7 @@ paths:
             
   /payment:
     post:
-      summary: Creates a payment method for completing an order.
+      summary: Creates a payment method for a customer.
       requestBody:
         required: true
         content:

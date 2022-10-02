@@ -56,6 +56,6 @@ paths:
           description: Payment deleted successfully.
         '401':
           description: The deletion of a payment method is unauthorized.
-	      '404':
-	        description: The payment method to be deleted was not found (it was already removed).          
+        '404':
+          description: The payment method to be deleted was not found (it was already removed).          
       

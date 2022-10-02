@@ -44,9 +44,9 @@ paths:
                   type: string
                 billing address:
                   type: string
-        responses:
-          '201':
-            description: Payment created successfully.
-          '401':
-            description: Payment not created successfully, lacks valid properties.
+      responses:
+        '201':
+          description: Payment created successfully.
+        '401':
+          description: Payment not created successfully, lacks valid properties.
       
